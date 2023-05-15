@@ -1,8 +1,10 @@
 
+import styled from './Card'
+
 export default function Card(props) {
    return (
       <div>
-         <button onClick={() => props.onClose()}>X</button>
+         <button className = {styled.boton} onClick={() => props.onClose()}>X</button>
          <p>{props.name}</p>
          <p>{props.species}</p>
          <p>{props.gender}</p>
