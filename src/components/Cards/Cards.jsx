@@ -1,7 +1,8 @@
-import Card from '../Card/Card';
+import Card from '../Card/Card.jsx';
+import styled from './Cards.module.css';
 
 export default function Cards(props) {
-   return <div>
+   return <div className = {styled.container}>
       {props.characters.map((character) => (
             <Card
                key={character.id}

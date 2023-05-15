@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.boton{
+    margin: 5px;
+}
+
+.input{
+    margin: 5px;
+}
