@@ -4,7 +4,7 @@ import Nav from './components/Nav/Nav.jsx';
 import {useState} from "react";
 import {Route, Routes} from 'react-router-dom';
 import About from './components/About/About.jsx';
-
+import Detail from './components/Detail/Detail.jsx';
 
 
 function App() {
@@ -27,7 +27,6 @@ function App() {
       alert("El ID no es válido.")
       }
    })
-
    }
 
    const onClose = (id) => {
@@ -40,9 +39,8 @@ function App() {
          <Routes>
             <Route path = "/" element = {<Cards characters={characters} onClose ={onClose} />} />
             <Route path = "/about" element = {<About />} />
+            <Route path = "/detail/:id" element = {<Detail characters={characters} />} />
          </Routes>
-         
-         
       </div>
    );
 }
