@@ -1,0 +1,41 @@
+.container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boton{
+    margin: 25px;
+    font-size: 25px;
+    padding: 6px;
+    border-radius: 6px;
+    padding-inline: 16px;
+}
+
+.imagen img{
+    margin-top: 35px;
+    margin-left: 35px;
+    width: 500px;
+    justify-content: right;
+    transform: scaleX(-1);
+    border-radius: 30px;
+
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 0px;
+}
+
+.titulo{
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.dato{
+    margin: 15px;
+}

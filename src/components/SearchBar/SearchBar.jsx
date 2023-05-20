@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 
 
-export default function SearchBar(props) {
+export default function SearchBar({onSearch}) {
 
    const [id, setId] = useState("");
 
@@ -14,7 +14,7 @@ export default function SearchBar(props) {
    return (
       <div className = {styled.container}>
          <input className = {styled.input} type='search' onChange = {handleChange}/>
-         <button className = {styled.boton} onClick = {() => props.onSearch(id)}>Agregar</button>
+         <button className = {styled.boton} onClick = {() => onSearch(id)}>Add</button>
       </div>
    );
 }

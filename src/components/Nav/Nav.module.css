@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: rgb(132, 167, 192);
+}
+
+.boton{
+    font-size: 120%;
+    margin-inline: 50px;
+    padding: 6px;
+    border-radius: 6px;
+    padding-inline: 16px;
+}
