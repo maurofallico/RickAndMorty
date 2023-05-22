@@ -1,0 +1,16 @@
+.form{
+    margin-top: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.input{
+    margin-left: 5px;
+    align-items: flex-end;
+}
+
+.boton{
+    margin-top: 10px;
+}

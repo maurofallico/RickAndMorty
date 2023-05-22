@@ -5,6 +5,7 @@ import {useState} from "react";
 import {Route, Routes} from 'react-router-dom';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
+import Form from './components/Form/Form.jsx';
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       <div className='App'>
          <Nav onSearch = {onSearch}/>
          <Routes>
-            <Route path = "/" element = {<Cards characters={characters} onClose ={onClose} />} />
+            <Route path = "/" element = {<Form />} />
+            <Route path = "/home" element = {<Cards characters={characters} onClose ={onClose} /> } />
             <Route path = "/about" element = {<About />} />
             <Route path = "/detail/:id" element = {<Detail characters={characters} />} />
          </Routes>
