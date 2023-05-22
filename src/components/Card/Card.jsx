@@ -8,12 +8,12 @@ export default function Card({id, name, species, gender, image, onClose}) {
          <div className = {styled.container}>
             <button className = {styled.boton} onClick={() => onClose(id)}>X</button>
             
-            <p className = {styled.texto}>Nombre: {name}</p>
-            <p className = {styled.texto}>Especie: {species}</p>
-            <p className = {styled.texto}>Género: {gender}</p>
+            <p className = {styled.texto}>Name: {name}</p>
+            <p className = {styled.texto}>Specie: {species}</p>
+            <p className = {styled.texto}>Gender: {gender}</p>
             <img className = {styled.imagen} src={image}/>
             <Link to = {`/detail/${id}`} className = {styled.link}>
-            <p>VER DETALLE</p>
+            <p>DETAILS</p>
             </Link>
          </div> 
       </div>
