@@ -20,7 +20,7 @@ export default function Nav (props) {
                         <button className = {styled.button}>Favorites</button>
                     </NavLink>
                 </div>
-                <p>FAVORITOS: {myFavorites}</p>
+                <p>myFavorites: {myFavorites}</p>
             </div>
         )
     }

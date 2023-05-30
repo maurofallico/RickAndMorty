@@ -1,15 +1,16 @@
 import React from "react";
 import Card from "../Card/Card.jsx";
 import { connect } from "react-redux";
-import styled from "../Cards/Cards.module.css";
+import styled from './Favorites.module.css'
 
-function Favorites({ myFavorites, onClose }) {
+function Favorites({ myFavorites, onClose}) {
   return (
-    <div className={styled.container}>
-      <h1>Favorites</h1>
+    <div>
+    <h1 className = {styled.titulo}>Favorites</h1> 
       {myFavorites.map(
         (character) => {
           return (
+            <div className = {styled.card}>
             <Card
               key={character.id}
               id={character.id}
@@ -17,16 +18,17 @@ function Favorites({ myFavorites, onClose }) {
               species={character.species}
               gender={character.gender}
               image={character.image}
-              status={character.status}
-              origin={character.origin}
               onClose={onClose}
             />
+            </div>
           );
         }
       )}
     </div>
   );
+  
 }
+
 
 const mapStateToProps = (state) => {
     return {
