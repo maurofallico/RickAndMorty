@@ -1,19 +1,26 @@
 import React from "react";
-import SearchBar from "../SearchBar/SearchBar";
 import {NavLink, useLocation} from 'react-router-dom';
+import { useSelector } from "react-redux";
+import styled from './Nav.module.css'
 
 export default function Nav (props) {
     const location = useLocation();
+    const myFavorites = useSelector((state) => state.myFavorites)
     if (location.pathname !== '/'){
         return (
             <div>
-                <NavLink to="/about">
-                <button>ABOUT</button>
-                </NavLink>
-                <NavLink to="/home">
-                <button>HOME</button>
-                </NavLink>
-                <SearchBar onSearch = {props.onSearch} />
+                <div className = {styled.buttonContainer}>
+                    <NavLink to="/about">
+                        <button className = {styled.button}>About</button>
+                    </NavLink>
+                    <NavLink to="/home">
+                        <button className = {styled.button}>Home</button>
+                    </NavLink>
+                    <NavLink to="/favorites">
+                        <button className = {styled.button}>Favorites</button>
+                    </NavLink>
+                </div>
+                <p>FAVORITOS: {myFavorites}</p>
             </div>
         )
     }

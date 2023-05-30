@@ -29,10 +29,10 @@ export default function Detail (){
             <p className = {styled.dato}><strong>GENDER: </strong>{character.gender}</p>
             <p className = {styled.dato}><strong>SPECIE: </strong>{character.species}</p>
             <p className = {styled.dato}><strong>ORIGIN: </strong>{character.origin?.name}</p>
-            <NavLink to = "/"><button className = {styled.boton}>Back</button></NavLink>
+            <NavLink to = "/home"><button className = {styled.boton}>Back</button></NavLink>
         </div>
         <div className = {styled.imagen}>
-          <img src={character.image}/>
+          <img src={character.image} alt='cardImage'/>
         </div>
       </div>
     )
