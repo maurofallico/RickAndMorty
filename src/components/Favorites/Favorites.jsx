@@ -3,7 +3,7 @@ import Card from "../Card/Card.jsx";
 import { connect } from "react-redux";
 import styled from './Favorites.module.css'
 
-function Favorites({ myFavorites, onClose}) {
+function Favorites( {myFavorites }) {
   return (
     <div>
     <h1 className = {styled.titulo}>Favorites</h1> 
@@ -18,7 +18,6 @@ function Favorites({ myFavorites, onClose}) {
               species={character.species}
               gender={character.gender}
               image={character.image}
-              onClose={onClose}
             />
             </div>
           );
@@ -28,7 +27,6 @@ function Favorites({ myFavorites, onClose}) {
   );
   
 }
-
 
 const mapStateToProps = (state) => {
     return {

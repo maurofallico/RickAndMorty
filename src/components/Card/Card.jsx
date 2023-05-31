@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { addFav, removeFav } from "../../redux/actions";
 
-export function Card({ id, name, species, gender, image, onClose }) {
+function Card({ id, name, species, gender, image, onClose }) {
   const [isFav, setIsFav] = useState(false);
 
   const dispatch = useDispatch()
@@ -17,7 +17,7 @@ export function Card({ id, name, species, gender, image, onClose }) {
       dispatch(removeFav(id));
     } else {
       setIsFav(true);
-      dispatch(addFav(id));
+      dispatch(addFav({id, name, species, gender, image}));
     }
   }
 

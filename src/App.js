@@ -51,14 +51,14 @@ function App() {
     setCharacters(characters.filter((char) => char.id !== id));
   };
 
-  function Home () {
+/*   function Home () {
     return (
       <React.Fragment>
         <SearchBar onSearch={onSearch} />
         <Cards characters={characters} onClose={onClose} />
       </React.Fragment>
     );
-  }
+  } */
 
   return (
     <div className="App">
@@ -66,7 +66,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Form login={login} />}  />
         
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
 
         <Route path="/about" element={<About />} />
         
