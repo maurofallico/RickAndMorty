@@ -5,8 +5,8 @@ import styled from './Favorites.module.css'
 
 function Favorites( {myFavorites }) {
   return (
-    <div>
-    <h1 className = {styled.titulo}>Favorites</h1> 
+    <div className = {styled.container}>
+    <h1 className = {styled.titulo}>FAVORITES</h1> 
       {myFavorites.map(
         (character) => {
           return (

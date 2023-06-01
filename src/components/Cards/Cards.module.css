@@ -1,4 +1,11 @@
 .container{
-    display: flex;
+    display:block;
+}
+
+.titulo{
     justify-content: center;
+}
+
+.card{
+    display: inline-block
 }

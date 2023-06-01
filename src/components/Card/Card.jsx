@@ -37,9 +37,11 @@ function Card({ id, name, species, gender, image, onClose }) {
           isFav ? (<button className={styled.botonFav} onClick={handleFavorite}>❤️</button>) : (
           <button className={styled.botonFav} onClick={handleFavorite}>🤍</button>)
           }
+          {!isFav && (
           <button className={styled.boton} onClick={() => onClose(id)}>
             X
           </button>
+        )}
         </div>
         <p className={styled.texto}>Name: {name}</p>
         <p className={styled.texto}>Specie: {species}</p>

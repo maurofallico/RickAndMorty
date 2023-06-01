@@ -1,8 +1,12 @@
+.container{
+    display:block;
+}
 
 .titulo{
+    margin-top: 89px;
     justify-content: center;
 }
 
 .card{
-    display: inline-block;
+    display: inline-block
 }
