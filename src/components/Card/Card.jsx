@@ -43,10 +43,12 @@ function Card({ id, name, species, gender, image, onClose }) {
           </button>
         )}
         </div>
-        { name.length > 26 ? (
-        <p className={styled.textoChico}>{name}</p>
-        ) : (
-        <p className={styled.texto}>{name}</p>
+        { name.length > 36 ? (
+        <p className={styled.textoMuyLargo}><strong>{name}</strong></p>
+      ) : name.length > 27 && name.length <= 36 ? (
+        <p className={styled.textoLargo}><strong>{name}</strong></p>
+      ) : (
+        <p className={styled.texto}><strong>{name}</strong></p>
         )}
         <img className={styled.imagen} src={image} alt="cardImage" />
         <Link to={`/detail/${id}`} className={styled.link}>
