@@ -15,7 +15,7 @@ function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
   const EMAIL = "maurofallico@gmail.com";
-  const PASSWORD = "Kenty2003";
+  const PASSWORD = "123456";
 
   function login(userData) {
     if (userData.password === PASSWORD && userData.email === EMAIL) {
@@ -49,15 +49,6 @@ function App() {
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
-
-/*   function Home () {
-    return (
-      <React.Fragment>
-        <SearchBar onSearch={onSearch} />
-        <Cards characters={characters} onClose={onClose} />
-      </React.Fragment>
-    );
-  } */
 
   return (
     <div className="App">

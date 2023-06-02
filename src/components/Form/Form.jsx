@@ -26,6 +26,7 @@ export default function Form(props) {
   }
 
   return (
+    <div className = {styled.container}>
     <form className={styled.form}>
       <label htmlFor="email" className={styled.label}>
         Email:
@@ -39,5 +40,9 @@ export default function Form(props) {
       <span className = {styled.errors}>{errors.password}</span>
       <button onClick = {handleSubmit} className={styled.boton}>Submit</button>
     </form>
+    <hr></hr>
+    <p className = {styled.text}>maurofallico@gmail.com</p>
+    <p className = {styled.text}>123456</p>
+    </div>
   );
 }

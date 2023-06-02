@@ -43,9 +43,11 @@ function Card({ id, name, species, gender, image, onClose }) {
           </button>
         )}
         </div>
-        <p className={styled.texto}>Name: {name}</p>
-        <p className={styled.texto}>Specie: {species}</p>
-        <p className={styled.texto}>Gender: {gender}</p>
+        { name.length > 26 ? (
+        <p className={styled.textoChico}>{name}</p>
+        ) : (
+        <p className={styled.texto}>{name}</p>
+        )}
         <img className={styled.imagen} src={image} alt="cardImage" />
         <Link to={`/detail/${id}`} className={styled.link}>
           <p>DETAILS</p>

@@ -18,7 +18,7 @@ const reducer = (state=initialState, action) => {
         case REMOVE_FAV:
             const removeId = parseInt(action.payload)
             const filterRemove = state.myFavorites.filter((char => char.id !== removeId))
-            return {...state, myFavorites: filterRemove }
+            return {...state, myFavorites: filterRemove, allCharacters: filterRemove}
 
         case FILTER:
             const filterGender = state.allCharacters.filter((char => char.gender === action.payload))

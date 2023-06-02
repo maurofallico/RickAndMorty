@@ -1,3 +1,8 @@
+.container{
+    display: inline-block;
+    justify-content: center;
+}
+
 .form{
     margin-top: 50px;
     display: inline-flex;
@@ -19,4 +24,9 @@
 .errors{
     font-size: 12px;
     color: red;
+}
+
+.text{
+    display: flex;
+    justify-content: right;
 }
