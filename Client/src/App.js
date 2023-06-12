@@ -31,9 +31,9 @@ function App() {
   }, [access, navigate]);
 
   const onSearch = (id) => {
-    const URL_BASE = "https://rickandmortyapi.com/api";
+    const URL_BASE = "http://localhost:3001/rickandmorty";
 
-    fetch(`${URL_BASE}/character/${id}`)
+    fetch(`${URL_BASE}/characters/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name && !characters.find((char) => char.id === data.id)) {

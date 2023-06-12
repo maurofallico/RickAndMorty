@@ -7,10 +7,10 @@ export default function Detail (){
     const { id } = useParams();
     const [ character, setCharacter ] = useState([]);
 
-    const URL_BASE = 'https://rickandmortyapi.com/api'
+    const URL_BASE = "http://localhost:3001/rickandmorty";
 
     useEffect(() => {
-        fetch(`${URL_BASE}/character/${id}`)
+        fetch(`${URL_BASE}/characters/${id}`)
           .then(response => {
             if (response.ok) {
               return response.json();
