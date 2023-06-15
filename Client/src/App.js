@@ -8,6 +8,7 @@ import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Form/Form.jsx";
 import Favorites from "./components/Favorites/Favorites.jsx";
 import React from "react";
+import axios from "axios";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -33,9 +34,9 @@ function App() {
   const onSearch = (id) => {
     const URL_BASE = "http://localhost:3001/rickandmorty";
 
-    fetch(`${URL_BASE}/characters/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
+    axios.get(`${URL_BASE}/character/${id}`)
+      .then((response) => {
+        const data = response.data
         if (data.name && !characters.find((char) => char.id === data.id)) {
           setCharacters((oldChars) => [...oldChars, data]);
         } else if (characters.find((char) => char.id === data.id)) {

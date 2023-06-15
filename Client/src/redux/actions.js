@@ -15,6 +15,7 @@ export function removeFav (id) {
         type: REMOVE_FAV,
         payload: id
     }
+    
 }
 
 export function filterCards (gender) {

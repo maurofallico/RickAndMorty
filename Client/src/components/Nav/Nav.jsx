@@ -19,7 +19,7 @@ export default function Nav ({onSearch}) {
                         <button className = {styled.button}>About</button>
                     </NavLink>
                     </div>
-                    <div classname = {styled.searchContainer}>
+                    <div className = {styled.searchContainer}>
                     {location.pathname === '/home' && <SearchBar className = {styled.busqueda} onSearch={onSearch} />}
                     </div>
                 </div>
