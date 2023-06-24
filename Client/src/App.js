@@ -15,28 +15,43 @@ function App() {
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  const EMAIL = "maurofallico@gmail.com";
-  const PASSWORD = "123456";
-
-  function login(userData) {
+ 
+  /* function login(userData) {
     if (userData.password === PASSWORD && userData.email === EMAIL) {
       setAccess(true);
       navigate("/home");
     } else {
       alert("Usuario o Password incorrecto");
     }
+  } */
+
+ async function login(userData) {
+  try {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    const  { data }  = await axios(URL + `?email=${email}&password=${password}`)
+    const { access } = data
+       setAccess(data);
+       if (access){
+        navigate('/home');
+       }
+       else{
+        alert("Usuario o Password incorrecto")
+       }
+  } catch (error) {
+    console.log(error)
   }
+ }
 
   useEffect(() => {
     !access && navigate("/");
   }, [access, navigate]);
 
-  const onSearch = (id) => {
-    const URL_BASE = "http://localhost:3001/rickandmorty";
+  const onSearch = async (id) => {
+    try {
+      const URL_BASE = "http://localhost:3001/rickandmorty";
 
-    axios.get(`${URL_BASE}/character/${id}`)
-      .then((response) => {
-        const data = response.data
+    const { data } = await axios.get(`${URL_BASE}/character/${id}`) 
         if (data.name && !characters.find((char) => char.id === data.id)) {
           setCharacters((oldChars) => [...oldChars, data]);
         } else if (characters.find((char) => char.id === data.id)) {
@@ -44,7 +59,9 @@ function App() {
         } else {
           alert("El ID no es válido.");
         }
-      });
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   const onClose = (id) => {

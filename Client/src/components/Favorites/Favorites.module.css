@@ -1,12 +1,21 @@
 .container{
+    margin-top: 15px;
     display:block;
 }
 
 .titulo{
-    margin-top: 89px;
+    margin-top: 2px;
     justify-content: center;
 }
 
 .card{
     display: inline-block
+}
+
+.sortContainer{
+    margin-top: 5px;
+    margin-bottom: -10px;
+    display: flex;
+    justify-content: space-around;
+    margin-inline: 750px;
 }

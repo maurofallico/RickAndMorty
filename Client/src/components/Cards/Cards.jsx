@@ -4,7 +4,6 @@ import styled from './Cards.module.css';
 export default function Cards({characters, onClose}) {
    return (
       <div className = {styled.container}>
-         <h1 className = {styled.titulo}>HOME</h1>
       {characters.map(({id, name, species, gender, image, status, origin}) => {
          return (
             <div className = {styled.card}>

@@ -24,7 +24,7 @@ function Favorites( {myFavorites }) {
   return (
     <div className = {styled.container}>
     <h1 className = {styled.titulo}>FAVORITES</h1> 
-    <div>
+    <div className = {styled.sortContainer}>
       <select name ="order" onChange = {handleOrder}>
         <option
         value="A">Ascendente

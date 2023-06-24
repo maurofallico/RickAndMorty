@@ -10,7 +10,7 @@ export default function Detail (){
     const URL_BASE = "http://localhost:3001/rickandmorty";
 
     useEffect(() => {
-        fetch(`${URL_BASE}/characters/${id}`)
+        fetch(`${URL_BASE}/character/${id}`)
           .then(response => {
             if (response.ok) {
               return response.json();
