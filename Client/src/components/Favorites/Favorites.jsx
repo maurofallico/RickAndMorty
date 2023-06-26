@@ -25,6 +25,7 @@ function Favorites( {myFavorites }) {
     <div className = {styled.container}>
     <h1 className = {styled.titulo}>FAVORITES</h1> 
     <div className = {styled.sortContainer}>
+    <div className = {styled.order}>
       <select name ="order" onChange = {handleOrder}>
         <option
         value="A">Ascendente
@@ -33,6 +34,8 @@ function Favorites( {myFavorites }) {
         value="B">Descendente
         </option>
       </select>
+      </div>
+      <div className = {styled.gender}>
       <select name ="filter" onChange = {handleFilter}>
         <option
         value="Male">Male
@@ -47,7 +50,8 @@ function Favorites( {myFavorites }) {
         value="unknow">Unknow
         </option>
       </select>
-    </div>
+      </div>
+      </div>
       {myFavorites.map(
         (character) => {
           return (

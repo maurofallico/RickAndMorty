@@ -16,6 +16,9 @@
     margin-top: 5px;
     margin-bottom: -10px;
     display: flex;
-    justify-content: space-around;
-    margin-inline: 750px;
+    justify-content: center;
+}
+
+.order{
+    margin-right: 20px;
 }
