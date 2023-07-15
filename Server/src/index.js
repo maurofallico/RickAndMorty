@@ -1,8 +1,15 @@
 const server = require('./app')
+const {conn} = require('./DB_connection')
 
-server.listen(3001, () => {
-    
+
+conn.sync({force: false}).then(() => {
+    server.listen(3001, () => {
+    })
+}).catch((error) => {
+    console.log(error)
 })
+
+
 
 
 
