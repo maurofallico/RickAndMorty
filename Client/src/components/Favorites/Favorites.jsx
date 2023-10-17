@@ -4,14 +4,15 @@ import Card from "../Card/Card.jsx";
 import { connect, useDispatch } from "react-redux";
 import styled from './Favorites.module.css'
 import {filterCards, orderCards} from '../../redux/actions.js'
+import {NavLink} from 'react-router-dom';
 
 function Favorites({myFavorites}) {
 
   const dispatch = useDispatch()
-
   const [aux, setAux] = useState(false)
 
   const handleOrder = (event) => {
+    
       dispatch(orderCards(event.target.value))
       setAux(!aux)
     }
@@ -27,17 +28,19 @@ function Favorites({myFavorites}) {
       <h1 className = {styled.titulo}>FAVORITES</h1> 
       <div className = {styled.sortContainer}>
       <div className = {styled.order}>
-        <select name ="order" onChange = {handleOrder}>
+        <select name ="order" onChange = {handleOrder} defaultValue="">
+        <option disabled= "true" value="">ORDER</option>
           <option
-          value="A">Ascendente
+          value="A">A - Z
           </option>
           <option
-          value="B">Descendente
+          value="B">Z - A
           </option>
         </select>
         </div>
         <div className = {styled.gender}>
-        <select name ="filter" onChange = {handleFilter}>
+        <select name ="filter" onChange = {handleFilter} defaultValue="">
+        <option disabled= "true" value="">FILTER</option>
           <option
           value="Male">Male
           </option>
@@ -48,7 +51,7 @@ function Favorites({myFavorites}) {
           value="Genderless">Genderless
           </option>
           <option
-          value="unknow">Unknow
+          value="unknow">Unknown
           </option>
         </select>
         </div>
@@ -69,6 +72,7 @@ function Favorites({myFavorites}) {
             );
           }
         )}
+        <NavLink className = {styled.botonContainer} to = "/home"><button className = {styled.boton}>Back</button></NavLink>
       </div>
     );
   }

@@ -1,20 +1,29 @@
-import styled from './SearchBar.module.css'
-import {useState} from 'react'
+import styled from "./SearchBar.module.css";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
+export default function SearchBar({ searchCharacter }) {
+  const allCharacters = useSelector((state) => state.allCharacters);
+  const [character, setCharacter] = useState('');
 
+  const characterChange = (e) => {
+    const inputCharacter = e.target.value;
+    setCharacter(inputCharacter);
+  };
 
-export default function SearchBar({onSearch}) {
+  useEffect(() => {
+    searchCharacter(character);
+  }, [allCharacters]);
 
-   const [id, setId] = useState("");
-
-   const handleChange = (event) => {
-   setId (event.target.value)
-}
-
-   return (
-      <div className = {styled.container}>
-         <input className = {styled.input} type='search' onChange = {handleChange}/>
-         <button className = {styled.boton} onClick = {() => onSearch(id)}>Add</button>
-      </div>
-   );
+  return (
+    <div className={styled.container}>
+      <input
+        className={styled.input}
+        type="search"
+        placeholder="Find a character..."
+        value={character}
+        onChange={characterChange}
+      />
+    </div>
+  );
 }

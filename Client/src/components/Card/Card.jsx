@@ -3,8 +3,11 @@ import styled from "./Card.module.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { addFav, removeFav } from "../../redux/actions";
+import { useNavigate } from "react-router-dom";
 
-function Card({ id, name, species, gender, image, onClose }) {
+function Card({ id, name, species, gender, image }) {
+
+  const navigate = useNavigate();
 
   const dispatch = useDispatch()
 
@@ -31,6 +34,10 @@ function Card({ id, name, species, gender, image, onClose }) {
     }
   }
 
+  const toDetail = () => {
+    navigate(`/detail/${id}`)
+  }
+
  
 
    return (
@@ -41,23 +48,15 @@ function Card({ id, name, species, gender, image, onClose }) {
           isFav ? (<button className={styled.botonFav} onClick={handleFavorite}>❤️</button>) : (
           <button className={styled.botonFav} onClick={handleFavorite}>🤍</button>)
           }
-          {!isFav && (
-          <button className={styled.boton} onClick={() => onClose(id)}>
-            X
-          </button>
-        )}
         </div>
-        { name.length > 36 ? (
+        { name.length > 27 ? (
         <p className={styled.textoMuyLargo}><strong>{name}</strong></p>
-      ) : name.length > 27 && name.length <= 36 ? (
+      ) : name.length > 15 && name.length <= 27 ? (
         <p className={styled.textoLargo}><strong>{name}</strong></p>
       ) : (
         <p className={styled.texto}><strong>{name}</strong></p>
         )}
-        <img className={styled.imagen} src={image} alt="cardImage" />
-        <Link to={`/detail/${id}`} className={styled.link}>
-          <p>DETAILS</p>
-        </Link>
+        <img className={styled.imagen} src={image} alt="cardImage" onClick={toDetail} />
       </div>
     </div>
   );

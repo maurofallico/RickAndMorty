@@ -3,6 +3,7 @@ const { Sequelize } = require('sequelize');
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 const  FavoriteModel  = require ('./models/Favorite')
 const  UserModel  = require ('./models/User')
+const  CharactersModel  = require ('./models/Characters')
 
 // EJERCICIO 03
 // A la instancia de Sequelize le falta la URL de conexión. ¡Agrégala!
@@ -20,6 +21,7 @@ const sequelize = new Sequelize(
 
 FavoriteModel(sequelize)
 UserModel(sequelize)
+CharactersModel(sequelize)
 
 //
 
@@ -27,7 +29,7 @@ UserModel(sequelize)
 
 // Ejercicio 06
 // ¡Relaciona tus modelos aquí abajo!
- const { User, Favorite } = sequelize.models;
+ const { User, Favorite, Characters } = sequelize.models;
 
  User.belongsToMany(Favorite, {through: "user_favorite"})
  Favorite.belongsToMany(User, {through: "user_favorite"})
@@ -35,5 +37,6 @@ UserModel(sequelize)
 module.exports = {
    User,
    Favorite,
+   Characters,
    conn: sequelize,
 };

@@ -1,14 +1,13 @@
 import Card from '../Card/Card.jsx';
 import styled from './Cards.module.css';
 
-export default function Cards({characters, onClose}) {
+export default function Cards({characters}) {
    return (
       <div className = {styled.container}>
       {characters.map(({id, name, species, gender, image, status, origin}) => {
          return (
-            <div className = {styled.card}>
+            <div className={styled.card} key={id}>
             <Card
-               key={id}
                id={id}
                name={name}
                species={species}
@@ -16,7 +15,6 @@ export default function Cards({characters, onClose}) {
                image={image}
                status={status}
                origin={origin}
-               onClose={onClose}
             />
             </div>
          )

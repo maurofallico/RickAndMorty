@@ -3,11 +3,11 @@ import {NavLink, useLocation} from 'react-router-dom';
 import styled from './Nav.module.css'
 import SearchBar from '../SearchBar/SearchBar'
 
-export default function Nav ({onSearch}) {
+export default function Nav ({searchCharacter}) {
     const location = useLocation();
     if (location.pathname !== '/'){
         return (
-                <div>
+                <div className= {styled.container}>
                     <div className = {styled.buttonContainer}>
                     <NavLink to="/home">
                         <button className = {styled.button}>Home</button>
@@ -20,7 +20,7 @@ export default function Nav ({onSearch}) {
                     </NavLink>
                     </div>
                     <div className = {styled.searchContainer}>
-                    {location.pathname === '/home' && <SearchBar className = {styled.busqueda} onSearch={onSearch} />}
+                    {location.pathname === '/home' && <SearchBar className = {styled.busqueda} searchCharacter={searchCharacter} />}
                     </div>
                 </div>
         )

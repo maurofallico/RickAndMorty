@@ -1,14 +1,50 @@
 .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.formContainer{
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     display: inline-block;
     justify-content: center;
+    width: 320px;
+    height: 210px;
+    border-radius: 12px;
+    background-color: rgb(241, 251, 255);
 }
 
 .form{
-    margin-top: 50px;
+    margin-top: 20px;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    margin-right: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.text{
+    display: flex;
+    margin-inline: 10px;
 }
 
 .input{

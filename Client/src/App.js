@@ -1,20 +1,28 @@
 import "./App.css";
 import Cards from "./components/Cards/Cards.jsx";
-import Nav from "./components/Nav/Nav.jsx";
 import { useState, useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Form/Form.jsx";
 import Favorites from "./components/Favorites/Favorites.jsx";
+import Paginated from "./components/Paginated/Paginated.jsx"
 import React from "react";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 function App() {
-  const [characters, setCharacters] = useState([]);
+
+  const characters = useSelector((state) => state.allCharacters);
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
+
+  
+
+  
+
+  
  
   /* function login(userData) {
     if (userData.password === PASSWORD && userData.email === EMAIL) {
@@ -28,7 +36,7 @@ function App() {
  async function login(userData) {
   try {
     const { email, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login/';
+    const URL = 'http://localhost:3001/rickandmorty/login';
     const  { data }  = await axios(URL + `?email=${email}&password=${password}`)
     const { access } = data
        setAccess(data);
@@ -43,11 +51,29 @@ function App() {
   }
  }
 
+ 
+
+
+
+  /* const getAllCharacters = async () => {
+    try {
+      const { data } = await axios.get("http://localhost:3001/rickandmorty/characters") 
+      setCharacters(data)
+    }
+    catch (error) {
+      console.log(error)
+    }
+  } */
+
+
+
   useEffect(() => {
     !access && navigate("/");
   }, [access, navigate]);
 
-  const onSearch = async (id) => {
+  
+
+  /* const onSearch = async (id) => {
     try {
       const URL_BASE = "http://localhost:3001/rickandmorty";
 
@@ -62,25 +88,23 @@ function App() {
     } catch (error) {
       console.log(error)
     }
-  };
+  }; */
 
-  const onClose = (id) => {
-    setCharacters(characters.filter((char) => char.id !== id));
-  };
 
   return (
     <div className="App">
-      <Nav onSearch={onSearch} />
+
       <Routes>
         <Route path="/" element={<Form login={login} />}  />
         
-        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
+        <Route path="/home" 
+        element={<Paginated />} />
 
         <Route path="/about" element={<About />} />
         
         <Route path="/detail/:id" element={<Detail characters={characters} />} />
         
-        <Route path="/favorites" element={<Favorites characters={characters} onClose={onClose} />}
+        <Route path="/favorites" element={<Favorites characters={characters} />}
         />  
       </Routes>
     </div>

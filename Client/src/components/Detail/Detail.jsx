@@ -23,17 +23,19 @@ export default function Detail (){
 
     return (
       <div className = {styled.container}>
+      <div className = {styled.formContainer}>
         <div className = {styled.texto}>
             <h1 className = {styled.titulo}>{character.name}</h1>
             <p className = {styled.dato}><strong>STATUS: </strong>{character.status}</p>
             <p className = {styled.dato}><strong>GENDER: </strong>{character.gender}</p>
             <p className = {styled.dato}><strong>SPECIE: </strong>{character.species}</p>
             <p className = {styled.dato}><strong>ORIGIN: </strong>{character.origin?.name}</p>
-            <NavLink to = "/home"><button className = {styled.boton}>Back</button></NavLink>
         </div>
         <div className = {styled.imagen}>
           <img src={character.image} alt='cardImage'/>
         </div>
+      </div>
+      <NavLink className = {styled.boton} to = "/home"><button className = {styled.boton}>Back</button></NavLink>
       </div>
     )
 }

@@ -1,3 +1,13 @@
 .App {
    text-align: center;
 }
+
+body{
+   
+   background-image: url('../public/rickandmorty-background.jpg');
+   background-size: cover;
+   background-attachment:fixed;
+   background-repeat: no-repeat;
+   background-position:center;
+   
+}

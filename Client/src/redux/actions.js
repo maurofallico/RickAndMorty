@@ -3,6 +3,17 @@ export const ADD_FAV = "ADD_FAV";
 export const REMOVE_FAV = "REMOVE_FAV";
 export const FILTER = "FILTER";
 export const ORDER = "ORDER";
+export const GET_CHARACTERS = "GET_GHARACTERS";
+
+export const getCharacters = (name) =>{
+  return async function (dispatch){
+    const response = await axios.get('http://localhost:3001/rickandmorty/characters?name=' + name );
+return dispatch ({
+    type: GET_CHARACTERS,
+    payload: response.data
+})
+}
+}
 
 export const addFav = (character) => {
   try {
