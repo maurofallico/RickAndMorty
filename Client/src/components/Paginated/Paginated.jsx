@@ -61,7 +61,7 @@ function Paginated() {
     setCharacters(allCharacters);
     setTotalPages(Math.ceil(characters.length / 16));
     setItems([...characters].splice((currentPage - 1) * 16, 16));
-  }, [allCharacters, currentPage]);
+  }, [allCharacters, characters, currentPage]);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -87,7 +87,7 @@ function Paginated() {
             &gt;
           </button>
         ) : (
-          <button className={styled.button} disabled>
+          <button className={styled.buttonOff} disabled>
             &gt;
           </button>
         )}

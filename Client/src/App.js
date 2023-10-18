@@ -1,5 +1,4 @@
 import "./App.css";
-import Cards from "./components/Cards/Cards.jsx";
 import { useState, useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import About from "./components/About/About.jsx";
@@ -17,21 +16,6 @@ function App() {
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-
-  
-
-  
-
-  
- 
-  /* function login(userData) {
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-      setAccess(true);
-      navigate("/home");
-    } else {
-      alert("Usuario o Password incorrecto");
-    }
-  } */
 
  async function login(userData) {
   try {
@@ -51,44 +35,11 @@ function App() {
   }
  }
 
- 
-
-
-
-  /* const getAllCharacters = async () => {
-    try {
-      const { data } = await axios.get("http://localhost:3001/rickandmorty/characters") 
-      setCharacters(data)
-    }
-    catch (error) {
-      console.log(error)
-    }
-  } */
-
-
 
   useEffect(() => {
     !access && navigate("/");
   }, [access, navigate]);
 
-  
-
-  /* const onSearch = async (id) => {
-    try {
-      const URL_BASE = "http://localhost:3001/rickandmorty";
-
-    const { data } = await axios.get(`${URL_BASE}/character/${id}`) 
-        if (data.name && !characters.find((char) => char.id === data.id)) {
-          setCharacters((oldChars) => [...oldChars, data]);
-        } else if (characters.find((char) => char.id === data.id)) {
-          alert("El personaje ya se está mostrando.");
-        } else {
-          alert("El ID no es válido.");
-        }
-    } catch (error) {
-      console.log(error)
-    }
-  }; */
 
 
   return (

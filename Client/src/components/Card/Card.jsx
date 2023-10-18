@@ -1,38 +1,48 @@
 import { connect, useDispatch, useSelector } from "react-redux";
 import styled from "./Card.module.css";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { addFav, removeFav } from "../../redux/actions";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Card({ id, name, species, gender, image }) {
+  const location = useLocation()
 
   const navigate = useNavigate();
 
   const dispatch = useDispatch()
 
   const myFavorites = useSelector((state) => state.myFavorites);
-
+  
   const [isFav, setIsFav] = useState(false);
 
   useEffect(() => {
-    myFavorites.forEach((fav) => {
-       if (fav.id === id) {
-          setIsFav(true);
-       }
-    });
- }, [myFavorites, id]);
+  myFavorites.forEach((fav) => {
+     if (fav.id === id) {
+        setIsFav(true);
+     }
+  });
+}, [myFavorites, id]);
+
+useEffect(() => {
+  myFavorites.forEach((fav) => {
+     if (fav.id === id) {
+        setIsFav(true);
+     }
+  });
+}, [myFavorites, id]);
 
 
-  const handleFavorite = () => {
-    if (isFav === true) {
-      setIsFav(false);
-      dispatch(removeFav(id));
-    } else {
-      setIsFav(true);
-      dispatch(addFav({id, name, species, gender, image}));
-    }
+ const handleFavorite = () => {
+  if (isFav === true && location.pathname === '/home') {
+    setIsFav(false);
+    dispatch(removeFav(id));
+  } else if (isFav === false && location.pathname === '/home') {
+    setIsFav(true);
+    dispatch(addFav({ id, name, species, gender, image }));
   }
+}
+
+
 
   const toDetail = () => {
     navigate(`/detail/${id}`)

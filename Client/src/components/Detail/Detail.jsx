@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import styled from './Detail.module.css'
 import {NavLink} from 'react-router-dom';
+import Nav from '../Nav/Nav'
 
 export default function Detail (){
     const { id } = useParams();
@@ -22,6 +23,8 @@ export default function Detail (){
       }, [id]);
 
     return (
+      <>
+      <Nav />
       <div className = {styled.container}>
       <div className = {styled.formContainer}>
         <div className = {styled.texto}>
@@ -29,7 +32,7 @@ export default function Detail (){
             <p className = {styled.dato}><strong>STATUS: </strong>{character.status}</p>
             <p className = {styled.dato}><strong>GENDER: </strong>{character.gender}</p>
             <p className = {styled.dato}><strong>SPECIE: </strong>{character.species}</p>
-            <p className = {styled.dato}><strong>ORIGIN: </strong>{character.origin?.name}</p>
+            <p className = {styled.dato}><strong>ORIGIN: </strong>{character.origin}</p>
         </div>
         <div className = {styled.imagen}>
           <img src={character.image} alt='cardImage'/>
@@ -37,5 +40,6 @@ export default function Detail (){
       </div>
       <NavLink className = {styled.boton} to = "/home"><button className = {styled.boton}>Back</button></NavLink>
       </div>
+      </>
     )
 }

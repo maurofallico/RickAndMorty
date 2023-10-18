@@ -3,13 +3,31 @@
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    gap: 100px;
 }
 
 .button{
-    margin-inline: 30px;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 32px;
+    border-radius: 8px;
     border-color: hsla(0, 0%, 0%, 0.75);
+}
+
+.button:hover{
+    cursor: pointer;
+    border: 2px solid blue;
+}
+
+button:active {
+    background-color: rgb(206, 206, 206);
+    transform: translateY(1px);
+  }
+
+.logoutContainer{
+    display: flex;
+    justify-content: right;
+    background-color: red;
+    
+    margin-bottom: 100;
 }
 
 .searchContainer{

@@ -4,11 +4,11 @@ import Card from "../Card/Card.jsx";
 import { connect, useDispatch } from "react-redux";
 import styled from './Favorites.module.css'
 import {filterCards, orderCards} from '../../redux/actions.js'
-import {NavLink} from 'react-router-dom';
+import Nav from '../Nav/Nav'
 
 function Favorites({myFavorites}) {
 
-  const dispatch = useDispatch()
+   const dispatch = useDispatch()
   const [aux, setAux] = useState(false)
 
   const handleOrder = (event) => {
@@ -20,12 +20,20 @@ function Favorites({myFavorites}) {
   const handleFilter = (event) => {
       dispatch(filterCards(event.target.value))
     }
-    
+
+  const clearFilter = () =>{
+    const filterSelect = document.querySelector('select[name="filter"]');
+    dispatch(filterCards(["Male", "Female", "Genderless", "Unknown"]))
+    filterSelect.value = '';
+
+  }
+
   
   if (myFavorites){
     return (
+      <>
+      <Nav />
       <div className = {styled.container}>
-      <h1 className = {styled.titulo}>FAVORITES</h1> 
       <div className = {styled.sortContainer}>
       <div className = {styled.order}>
         <select name ="order" onChange = {handleOrder} defaultValue="">
@@ -55,25 +63,25 @@ function Favorites({myFavorites}) {
           </option>
         </select>
         </div>
+        <button className = {styled.clearFilter}onClick={clearFilter}>CLEAR FILTER</button>
         </div>
-        {myFavorites.map(
-          (character) => {
-            return (
-              <div className = {styled.card}>
-              <Card
-                key={character.id}
-                id={character.id}
-                name={character.name}
-                species={character.species}
-                gender={character.gender}
-                image={character.image}
-              />
-              </div>
-            );
-          }
-        )}
-        <NavLink className = {styled.botonContainer} to = "/home"><button className = {styled.boton}>Back</button></NavLink>
+        {myFavorites.length > 0 ? (
+  myFavorites.map((character) => (
+    <div className={styled.card} key={character.id}>
+      <Card
+        id={character.id}
+        name={character.name}
+        species={character.species}
+        gender={character.gender}
+        image={character.image}
+      />
+    </div>
+  ))
+) : <div>
+  <p className = {styled.noFavorites}>No favorites to show.</p>
+  </div>}
       </div>
+      </>
     );
   }
 

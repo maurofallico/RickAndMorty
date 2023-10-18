@@ -19,6 +19,12 @@ export default function Nav ({searchCharacter}) {
                         <button className = {styled.button}>About</button>
                     </NavLink>
                     </div>
+                    <div className={styled.logoutContainer}>
+                    <NavLink to ="/">
+                    <button className={styled.button}>Logout</button>
+                    </NavLink>
+                    </div>
+                    
                     <div className = {styled.searchContainer}>
                     {location.pathname === '/home' && <SearchBar className = {styled.busqueda} searchCharacter={searchCharacter} />}
                     </div>

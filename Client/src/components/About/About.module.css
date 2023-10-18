@@ -1,8 +1,22 @@
 .texto{
-    font-size: 26px;
+    font-size: 36px;
+    color: rgb(218, 230, 125);
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+    font-weight: bolder;
 }
 
-.titulo{
-    margin-top: 15px;
-    margin-bottom: 35px
+.profile{
+    margin-top: 30px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.link{
+    font-family: 'Open Sans',serif;
+    font-weight: 100;
 }
