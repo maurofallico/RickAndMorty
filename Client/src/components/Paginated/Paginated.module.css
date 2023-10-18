@@ -16,6 +16,11 @@
     border: 1px solid black;
 }
 
+.button:active {
+    background-color: rgb(206, 206, 206);
+    transform: translateY(1px);
+  }
+
 .buttonOff{
     margin-inline: 1em;
     width: 2.5em;
@@ -40,6 +45,11 @@
 .pageButton:hover{
     cursor: pointer;
 }
+
+.pageButton:active {
+    background-color: rgb(206, 206, 206);
+    transform: translateY(1px);
+  }
 
 .pageButtonSelected{
     background-color: rgb(188, 217, 251);
