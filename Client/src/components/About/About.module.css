@@ -1,6 +1,6 @@
 .texto{
     font-size: 36px;
-    color: rgb(218, 230, 125);
+    color: rgb(244, 187, 55);
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
     font-weight: bolder;
@@ -19,12 +19,16 @@
 .link{
     font-family: 'Open Sans',serif;
     font-weight: 100;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: black;
 }
 
 @media (max-width: 400px) {
     .texto{
-        font-size: 18px;
+        font-size: 20px;
+        margin-inline: 30px;
+        font-weight: bolder;
         -webkit-text-stroke-width: 1px;
-        margin-inline: 50px;
+        -webkit-text-stroke-color: black;
     }
   }
