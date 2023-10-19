@@ -68,3 +68,16 @@
     cursor: pointer;
     border: 2px solid blue
 }
+
+@media (max-width: 400px) {
+    .sortContainer{
+        gap: 10px;
+        transform: scale(0.8);
+    }
+    .clearFilter{
+        transform: scale(0.8);
+    }
+    .noFavorites{
+        font-size: 18px;
+    }
+  }

@@ -42,3 +42,25 @@
     justify-content: center;
     flex-direction: column;
 }
+
+@media (max-width: 400px) {
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+    .button{
+        font-size: 16px;
+        border-radius: 4px;
+    }
+    .logoutContainer{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        margin-top: 8px;
+        margin-right: 45px;
+        transform: scale(0.7)
+    }
+  }

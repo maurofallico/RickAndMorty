@@ -81,3 +81,9 @@
     display: flex;
     justify-content: right;
 }
+
+@media (max-width: 400px) {
+    .logo {
+      width: 320px;
+    }
+  }

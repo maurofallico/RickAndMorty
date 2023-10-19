@@ -20,3 +20,11 @@
     font-family: 'Open Sans',serif;
     font-weight: 100;
 }
+
+@media (max-width: 400px) {
+    .texto{
+        font-size: 18px;
+        -webkit-text-stroke-width: 1px;
+        margin-inline: 50px;
+    }
+  }
