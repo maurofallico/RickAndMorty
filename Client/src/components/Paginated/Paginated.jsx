@@ -39,7 +39,7 @@ function Paginated() {
   };
 
   function searchCharacter(name) {
-    dispatch(getCharacters(name));
+    //dispatch(getCharacters(name));
   }
 
   let prevButton = false;

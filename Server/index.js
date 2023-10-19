@@ -2,7 +2,7 @@ const axios = require("axios");
 const server = require('./src/app')
 const {conn, Characters} = require('./src/DB_connection')
 
-const getAllCharacters = async () => {
+/* const getAllCharacters = async () => {
     const response = await axios.get("http://localhost:5000/characters")
     const data = response.data
     const characters = data.map(char => {
@@ -20,7 +20,7 @@ const getAllCharacters = async () => {
     for (const character of characters) {
       await Characters.create(character);
     }
-  }
+  } */
 
 
 conn.sync({force: false}).then(async () => {

@@ -77,3 +77,12 @@
     padding-inline: 6px;
     margin-bottom: 25px;
 }
+
+
+
+@media (max-width: 400px) {
+    .botones{
+        margin-top: 20px;
+        margin-inline: 35px;   
+    }
+  }
