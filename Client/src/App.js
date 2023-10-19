@@ -25,6 +25,7 @@ function App() {
     const { access } = data
        setAccess(data); */
        if (email === "admin@rick.com" && password === "Pickle123"){
+        setAccess(true)
         navigate('/home');
        }
        else{
