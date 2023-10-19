@@ -31,6 +31,7 @@ function App() {
         alert("Usuario o Password incorrecto")
        }
   } catch (error) {
+    alert("Incorrect username or password.")
     console.log(error)
   }
  }

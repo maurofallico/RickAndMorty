@@ -6,15 +6,15 @@ export default function validation (userData){
     let errors = {}
 
     if (!userData.email){
-        errors.email = 'E-mail vacío'
+        errors.email = 'Empty E-mail'
     }
     else{
         if (!regexEmail.test(userData.email)){
-            errors.email = "E-mail inválido"
+            errors.email = "Invalid E-mail"
         }
         else{
             if (userData.email.length > 35){
-                errors.email = "E-mail demasiado largo"
+                errors.email = "E-mail too long"
             }
             else{
                 errors.email = ""
@@ -23,11 +23,11 @@ export default function validation (userData){
     }
 
     if (!userData.password){
-        errors.password = 'Password vacía'
+        errors.password = 'Empty Password'
     }
     else{
         if (!regexPassword.test(userData.password)){
-            errors.password = 'Entre 6 y 10 caracteres y al menos un número'
+            errors.password = "Between 6 and 10 and at least one number"
         }
         else{
             errors.password = ''
