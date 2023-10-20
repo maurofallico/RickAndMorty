@@ -80,4 +80,7 @@
     .noFavorites{
         font-size: 18px;
     }
+    .clearFilter:active {
+        transform: none
+      }
   }

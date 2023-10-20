@@ -80,9 +80,10 @@
 
 
 
-@media (max-width: 420px) {
+@media (max-width: 420px) { 
     .botones{
         margin-top: 20px;
         margin-inline: 35px;   
     }
+
   }

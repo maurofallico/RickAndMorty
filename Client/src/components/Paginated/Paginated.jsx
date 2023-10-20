@@ -39,7 +39,7 @@ function Paginated() {
   };
 
   function searchCharacter(name) {
-    //dispatch(getCharacters(name));
+    dispatch(getCharacters(name));
   }
 
   let prevButton = false;
@@ -70,7 +70,26 @@ function Paginated() {
   return (
     <>
       <Nav searchCharacter={searchCharacter} />
-      
+      {window.innerWidth <= 420 ? (<div className={styled.botones}>
+        {prevButton === true ? (
+          <button className={styled.button} onClick={prevHandler}>
+            &lt;
+          </button>
+        ) : (
+          <button className={styled.buttonOff} disabled>
+            &lt;
+          </button>
+        )}
+        {nextButton === true ? (
+          <button className={styled.button} onClick={nextHandler}>
+            &gt;
+          </button>
+        ) : (
+          <button className={styled.buttonOff} disabled>
+            &gt;
+          </button>
+        )}
+      </div>): (null)}
       <Cards characters = {items} />
       <div className={styled.botones}>
         {prevButton === true ? (
@@ -91,7 +110,7 @@ function Paginated() {
             &gt;
           </button>
         )}
-        {
+        {window.innerWidth > 420 ? (
           <div className={styled.pageButtons}>
             {Array.from({ length: totalPages }, (_, index) => index + 1).map(
               (page) => (
@@ -108,8 +127,7 @@ function Paginated() {
                 </button>
               )
             )}
-          </div>
-        }
+      </div>): (null)}
       </div>
     </>
   );
