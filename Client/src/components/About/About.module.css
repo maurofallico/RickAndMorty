@@ -1,9 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+   
+}
+
 .texto{
-    font-size: 36px;
-    color: rgb(244, 187, 55);
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
+    background-color: rgb(241, 251, 255);
+    font-size: 24px;
+    color: rgb(0, 0, 0);
     font-weight: bolder;
+    width: 800px;
+    min-width: 400px;
+    border-radius: 25px;
 }
 
 .profile{
@@ -23,12 +33,14 @@
     -webkit-text-stroke-color: black;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .texto{
-        font-size: 20px;
-        margin-inline: 30px;
-        font-weight: bolder;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black;
+        font-size: 12px;
+        width: fit-content;
+        border-radius: 0;
+    }
+    .profile{
+        width: 130px;
+        height: 130px;
     }
   }

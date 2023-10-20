@@ -82,7 +82,7 @@
     justify-content: right;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .logo {
       width: 320px;
     }
