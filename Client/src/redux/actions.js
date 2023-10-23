@@ -7,7 +7,7 @@ export const GET_CHARACTERS = "GET_GHARACTERS";
 
 export const getCharacters = (name) =>{
   return async function (dispatch){
-    const response = await axios.get('http://0.0.0.0:6485/rickandmorty/characters?name=' + name );
+    const response = await axios.get('http://localhost:6485/rickandmorty/characters?name=' + name );
 return dispatch ({
     type: GET_CHARACTERS,
     payload: response.data
@@ -16,7 +16,7 @@ return dispatch ({
 }
 
 export const addFav = (character) => {
-    const endpoint = "http://localhost:3001/rickandmorty/fav";
+    const endpoint = "http://localhost:6485/rickandmorty/fav";
     return async (dispatch) => {
       const { data } = await axios.post(endpoint, character);
       return dispatch({
@@ -28,7 +28,7 @@ export const addFav = (character) => {
 
 export const removeFav = (id) => {
   try {
-    const endpoint = "http://localhost:3001/rickandmorty/fav/" + id;
+    const endpoint = "http://localhost:6485/rickandmorty/fav/" + id;
     return async (dispatch) => {
       const { data } = await axios.delete(endpoint)
         return dispatch({
