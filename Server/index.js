@@ -24,7 +24,7 @@ const getAllCharacters = async () => {
 
 
 conn.sync({force: false}).then(async () => {
-    server.listen(6485, async () => {
+    server.listen(6485, "0.0.0.0", async () => {
     });
 }).catch((error) => {
     console.log(error);
