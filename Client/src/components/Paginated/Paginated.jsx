@@ -70,7 +70,7 @@ function Paginated() {
   return (
     <>
       <Nav searchCharacter={searchCharacter} />
-      {window.innerWidth <= 420 ? (<div className={styled.botones}>
+      {window.innerWidth <= 420 && items.length > 0 ? (<div className={styled.botones}>
         {prevButton === true ? (
           <button className={styled.button} onClick={prevHandler}>
             &lt;
@@ -91,7 +91,7 @@ function Paginated() {
         )}
       </div>): (null)}
       <Cards characters = {items} />
-      <div className={styled.botones}>
+      {items.length > 0 ? (<div className={styled.botones}>
         {prevButton === true ? (
           <button className={styled.button} onClick={prevHandler}>
             &lt;
@@ -128,7 +128,7 @@ function Paginated() {
               )
             )}
       </div>): (null)}
-      </div>
+      </div>): (null)}
     </>
   );
 }
