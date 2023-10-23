@@ -9,5 +9,6 @@ body{
    background-repeat: no-repeat;
    background-position:center;
    overflow-x: hidden;
-   height: fit-content;
+   background-color: blue;
+
 }
