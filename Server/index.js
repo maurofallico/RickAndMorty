@@ -1,6 +1,7 @@
 const axios = require("axios");
 const server = require('./src/app')
 const {conn, Characters} = require('./src/DB_connection')
+const PORT = process.env.PORT
 
 const getAllCharacters = async () => {
     const response = await axios.get("http://localhost:5000/characters")
@@ -24,7 +25,7 @@ const getAllCharacters = async () => {
 
 
 conn.sync({force: false}).then(async () => {
-    server.listen(6485, "0.0.0.0", async () => {
+    server.listen(PORT, "0.0.0.0", async () => {
     });
 }).catch((error) => {
     console.log(error);
