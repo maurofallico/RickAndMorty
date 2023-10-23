@@ -18,7 +18,7 @@ const getAllCharacters = async () => {
     })
   
     for (const character of characters) {
-      await Characters.create(character);
+      await Characters.create(character)
     }
   }
 
