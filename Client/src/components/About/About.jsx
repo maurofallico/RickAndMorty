@@ -3,7 +3,7 @@ import Nav from '../Nav/Nav'
 
 export default function About () {
     return(
-        <div>
+        <div className={styled.fullContainer}>
             <Nav />
             <img src="./profile.jpg" alt="Mauro" className={styled.profile}/>
             <div className = {styled.container}>

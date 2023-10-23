@@ -1,3 +1,7 @@
+.fullContainer{
+    overflow-y: hidden;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -33,9 +37,7 @@
     -webkit-text-stroke-color: black;
 }
 
-body{
-    overflow-y: hidden;
-}
+
 
 @media (max-width: 420px) {
     .texto{
