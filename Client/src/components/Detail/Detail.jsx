@@ -8,7 +8,7 @@ export default function Detail (){
     const { id } = useParams();
     const [ character, setCharacter ] = useState([]);
 
-    const URL_BASE = "http://localhost:3001/rickandmorty";
+    const URL_BASE = 'https://rickandmorty-production-bba0.up.railway.app/rickandmorty';
 
     useEffect(() => {
         fetch(`${URL_BASE}/character/${id}`)

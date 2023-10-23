@@ -16,7 +16,7 @@ return dispatch ({
 }
 
 export const addFav = (character) => {
-    const endpoint = `${process.env.URL}rickandmorty/fav`;
+    const endpoint = `https://rickandmorty-production-bba0.up.railway.app/rickandmorty/fav`;
     return async (dispatch) => {
       const { data } = await axios.post(endpoint, character);
       return dispatch({
@@ -28,7 +28,7 @@ export const addFav = (character) => {
 
 export const removeFav = (id) => {
   try {
-    const endpoint = `${process.env.URL}rickandmorty/fav/` + id;
+    const endpoint = `https://rickandmorty-production-bba0.up.railway.app/rickandmorty/fav/` + id;
     return async (dispatch) => {
       const { data } = await axios.delete(endpoint)
         return dispatch({
