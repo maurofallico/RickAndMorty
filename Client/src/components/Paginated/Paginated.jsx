@@ -7,6 +7,7 @@ import { getCharacters } from "../../redux/actions.js"
 import styled from './Paginated.module.css'
 
 function Paginated() {
+  console.log(process.env.URL)
   const allCharacters = useSelector((state) => state.allCharacters);
 
   const [characters, setCharacters] = useState([...allCharacters]);

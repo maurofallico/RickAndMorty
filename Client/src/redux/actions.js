@@ -7,7 +7,7 @@ export const GET_CHARACTERS = "GET_GHARACTERS";
 
 export const getCharacters = (name) =>{
   return async function (dispatch){
-    const response = await axios.get(`${process.env.URL}rickandmorty/characters?name=` + name );
+    const response = await axios.get(`${process.env.REACT_APP_URL}rickandmorty/characters?name=` + name );
 return dispatch ({
     type: GET_CHARACTERS,
     payload: response.data
