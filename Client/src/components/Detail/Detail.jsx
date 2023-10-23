@@ -38,7 +38,6 @@ export default function Detail (){
           <img src={character.image} alt='cardImage'/>
         </div>
       </div>
-      <NavLink className = {styled.boton} to = "/home"><button className = {styled.boton}>Back</button></NavLink>
       </div>
       </>
     )
