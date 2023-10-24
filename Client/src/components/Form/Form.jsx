@@ -30,7 +30,7 @@ export default function Form(props) {
 
   return (
     <div className = {styled.container}>
-    <img src="./logo.png" alt="RickAndMortyLogo" className={styled.logo}/>
+    <img src="./logo.png" alt="RickAndMortyLogo" loading="lazy" className={styled.logo}/>
     <div className = {styled.formContainer}>
     <form className={styled.form}>
     
