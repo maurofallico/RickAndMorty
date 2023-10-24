@@ -16,8 +16,6 @@ function Paginated() {
   const [items, setItems] = useState([...characters]);
   const [totalPages, setTotalPages] = useState(1);
 
-  const [loading, setLoading] = useState(true)
-
   const nextHandler = () => {
     const total = characters.length;
     const firstIndex = currentPage * 16; //se guarda el primer índice de la página actual
@@ -72,7 +70,6 @@ function Paginated() {
 
   return (
     <>
-    {loading? (<div className={styled.loading}></div>) : (<div className={styled.container}>
       <Nav searchCharacter={searchCharacter} />
       {window.innerWidth <= 420 && items.length > 0 ? (<div className={styled.botones}>
         {prevButton === true ? (
@@ -133,7 +130,6 @@ function Paginated() {
             )}
       </div>): (null)}
       </div>): (null)}
-    </div>)}
     </>
   );
 }
