@@ -10,7 +10,7 @@ export default function Detail (){
 
     const URL_BASE = 'https://rickandmorty-production-bba0.up.railway.app/rickandmorty';
 
-    useEffect(() => {
+     useEffect(() => {
       const timer = setTimeout(() => {
         fetch(`${URL_BASE}/character/${id}`)
           .then((response) => {
@@ -24,14 +24,14 @@ export default function Detail (){
           });
       }, 100);
       return () => clearTimeout(timer);
-    }, [id]);
+    }, [id]); 
 
     return (
       <>
       <Nav />
       <div className = {styled.container}>
         {loading? ( <div className = {styled.loadingContainer}>
-        <div className = {styled.texto}>
+        <div>
             <h1 className = {styled.loading}>LOADING...</h1>
         </div>
       </div>) : ( <div className = {styled.formContainer}>

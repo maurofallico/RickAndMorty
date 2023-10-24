@@ -84,9 +84,6 @@
 }
 
 @media (max-width: 420px) {
-    .boton{
-        transform: scale(0.7)
-    }
     .container{
         align-items: center;
         width: 50vh;
@@ -114,5 +111,13 @@
     }
     .dato{
         margin: 4px;
+    }
+    .loadingContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        background-color: rgb(241, 251, 255);
     }
   }
