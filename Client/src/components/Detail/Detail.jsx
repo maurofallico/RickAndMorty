@@ -35,7 +35,7 @@ export default function Detail (){
             <p className = {styled.dato}><strong>ORIGIN: </strong>{character.origin}</p>
         </div>
         <div className = {styled.imagen}>
-          <img src={character.image} landing= "lazy" alt='cardImage'/>
+          <img src={character.image} loading="lazy" alt='cardImage'/>
         </div>
       </div>
       </div>
