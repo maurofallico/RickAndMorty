@@ -26,6 +26,8 @@ export default function Detail (){
       return () => clearTimeout(timer);
     }, [id]); 
 
+    
+
     return (
       <>
       <Nav />
