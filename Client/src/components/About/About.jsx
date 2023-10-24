@@ -5,7 +5,7 @@ export default function About () {
     return(
         <div className={styled.fullContainer}>
             <Nav />
-            <img src="./profile.jpg" alt="Mauro" className={styled.profile}/>
+            <img src="./profile.jpg" alt="Mauro" landing= "lazy" className={styled.profile}/>
             <div className = {styled.container}>
     <p className = {styled.texto}><br></br>Hello there! I'm Mauro, and I'm a FullStack Web Developer. <br></br><br></br>
     I created this project to practice new technologies, improve my skills, and further my knowledge. <br></br><br></br>
