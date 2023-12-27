@@ -61,7 +61,6 @@ function Paginated() {
     setCharacters(allCharacters);
     setTotalPages(Math.ceil(characters.length / 16));
     setItems([...characters].splice((currentPage - 1) * 16, 16));
-    setLoading(false)
   }, [allCharacters, characters, currentPage]);
 
   useEffect(() => {

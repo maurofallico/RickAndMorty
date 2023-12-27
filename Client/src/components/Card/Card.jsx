@@ -33,10 +33,10 @@ useEffect(() => {
 
 
  const handleFavorite = () => {
-  if (isFav === true && location.pathname === '/home') {
+  if (isFav === true ) {
     setIsFav(false);
     dispatch(removeFav(id));
-  } else if (isFav === false && location.pathname === '/home') {
+  } else if (isFav === false ) {
     setIsFav(true);
     dispatch(addFav({ id, name, species, gender, image }));
   }
