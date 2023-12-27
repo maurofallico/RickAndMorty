@@ -7,7 +7,7 @@ export default function About () {
             <Nav />
             <img src="./profile.jpg" alt="Mauro" loading="lazy" className={styled.profile}/>
             <div className = {styled.container}>
-    <p className = {styled.texto}><br></br>Hello there. I'm Mauro, and I'm a FullStack Web Developer. <br></br><br></br>
+    <p className = {styled.texto}><br></br>Hello there! I'm Mauro, and I'm a FullStack Web Developer. <br></br><br></br>
     I created this project to practice new technologies, improve my skills, and further my knowledge. <br></br><br></br>
     Any feedback will be appreciated. <br></br><br></br>
         You can reach me out through{" "}
