@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions"
+import { GET_CHARACTERS, ADD_FAV, REMOVE_FAV, FILTER, ORDER, } from "./actions"
 
 
 const initialState = {

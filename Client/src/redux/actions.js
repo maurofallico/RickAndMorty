@@ -7,13 +7,16 @@ export const GET_CHARACTERS = "GET_GHARACTERS";
 
 export const getCharacters = (name) =>{
   return async function (dispatch){
-    const response = await axios.get(`http://localhost:3001/rickandmorty/characters?name=` + name );
+    const response = await axios.get(`http://localhost:3001/rickandmorty/characters?name=${name}`);
+    const filteredCharacters = response.data.filter(character => character.name.toLowerCase().startsWith(name.toLowerCase())
+    );
 return dispatch ({
     type: GET_CHARACTERS,
-    payload: response.data
+    payload: filteredCharacters
 })
 }
 }
+
 
 export const addFav = (character) => {
     const endpoint = `http://localhost:3001/rickandmorty/fav`;
