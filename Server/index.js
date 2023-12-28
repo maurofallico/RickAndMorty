@@ -16,6 +16,7 @@ const getAllCharacters = async () => {
         status: char.status
       }
     })
+    await characters.sort((a, b) => parseInt(a.id) - parseInt(b.id));
   
     for (const character of characters) {
       await Characters.upsert(character)

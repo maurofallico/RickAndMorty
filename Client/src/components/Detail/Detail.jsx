@@ -8,11 +8,11 @@ export default function Detail (){
     const { id } = useParams();
     const [ character, setCharacter ] = useState([]);
 
-    const URL_BASE = 'https://rickandmorty-production-bba0.up.railway.app/rickandmorty';
+    const URL_BASE = 'https://rickandmortyapi.com/api/character';
 
      useEffect(() => {
       const timer = setTimeout(() => {
-        fetch(`${URL_BASE}/character/${id}`)
+        fetch(`${URL_BASE}/${id}`)
           .then((response) => {
             if (response.ok) {
               return response.json();
@@ -42,7 +42,7 @@ export default function Detail (){
             <p className = {styled.dato}><strong>STATUS: </strong>{character.status}</p>
             <p className = {styled.dato}><strong>GENDER: </strong>{character.gender}</p>
             <p className = {styled.dato}><strong>SPECIE: </strong>{character.species}</p>
-            <p className = {styled.dato}><strong>ORIGIN: </strong>{character.origin}</p>
+            <p className = {styled.dato}><strong>ORIGIN: </strong>{character.origin.name}</p>
         </div>
         <div className = {styled.imagen}>
           <img src={character.image} loading="lazy" alt='cardImage'/>
