@@ -29,7 +29,7 @@ export const addFav = (character) => {
 
 export const removeFav = (id) => {
   try {
-    const endpoint = `https://rickandmorty-4d7y.onrender.com/rickandmorty/fav` + id;
+    const endpoint = `https://rickandmorty-4d7y.onrender.com/rickandmorty/fav/` + id;
     return async (dispatch) => {
       const { data } = await axios.delete(endpoint)
         return dispatch({
