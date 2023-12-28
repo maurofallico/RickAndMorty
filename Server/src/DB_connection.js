@@ -12,7 +12,7 @@ const  CharactersModel  = require ('./models/Characters')
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
    // URL
-   `postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/rickandmorty`,
+   `postgresql://postgres:admin@localhost/rickandmorty`,
    { logging: false, native: false }
 );
 
