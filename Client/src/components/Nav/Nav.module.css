@@ -7,7 +7,7 @@
 }
 
 .button{
-    font-size: 32px;
+    font-size: 28px;
     border-radius: 8px;
     border-color: hsla(0, 0%, 0%, 0.75);
     background-color: rgb(241, 251, 255);
@@ -17,6 +17,7 @@
 .button:hover{
     cursor: pointer;
     border: 2px solid blue;
+    background-color: rgb(237, 237, 237);
 }
 
 .button:active {
@@ -43,6 +44,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: rgb(31, 109, 151);
+    padding-bottom: 20px;
+    border-bottom: 3px solid rgb(241, 251, 255);
 }
 
 @media (max-width: 420px) {
