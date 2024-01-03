@@ -31,7 +31,6 @@ export default function Detail (){
 
     return (
       <>
-      <Nav />
       <div className = {styled.container}>
         {loading? ( <div className = {styled.loadingContainer}>
         <div>

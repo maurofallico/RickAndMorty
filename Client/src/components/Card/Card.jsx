@@ -66,7 +66,9 @@ useEffect(() => {
       ) : (
         <p className={styled.texto}><strong>{name}</strong></p>
         )}
+        <div className={styled.imagenContainer}>
         <img className={styled.imagen} src={image} loading="lazy" alt="cardImage" onClick={toDetail} />
+        </div>
       </div>
     </div>
   );

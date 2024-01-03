@@ -21,6 +21,7 @@
     align-self: end;
     margin-right: 8px;
 }
+
 .searchContainer{
     flex-direction: row;
     margin-top: 10px;
@@ -74,17 +75,6 @@
     cursor: pointer;
     background-color: rgb(237, 237, 237);
 }
-
-/* .logoutContainer{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    margin-top: 25px;
-    margin-right: 20px;
-} */
-
-
-
 
 @media (max-width: 420px) {
     .selected{

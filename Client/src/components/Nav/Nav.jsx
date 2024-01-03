@@ -7,12 +7,11 @@ import SearchBar from '../SearchBar/SearchBar'
 export default function Nav ({searchCharacter}) {
 
     const [select, setSelect] = useState('home')
-    const [windowWidth, setWindowWidth] = useState(0);
     const location = useLocation();
 
-    const fav = windowWidth < 420 ? ("Favs") : ("Favorites")
+    
 
-    useEffect(() => {
+    /* useEffect(() => {
         if (typeof window !== 'undefined') {
           setWindowWidth(window.innerWidth);
     
@@ -26,7 +25,11 @@ export default function Nav ({searchCharacter}) {
             window.removeEventListener('resize', handleResize);
           };
         }
-      }, []);
+      }, []); */
+
+      const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
+
+      const fav = windowWidth < 420 ? ("Favs") : ("Favorites")
 
     useEffect(() => {
         switch (location.pathname){

@@ -68,7 +68,7 @@ function Paginated() {
   }, [totalPages]);
 
   return (
-    <>
+    <div className={styled.container}>
       <Nav searchCharacter={searchCharacter} />
       {window.innerWidth <= 420 && items.length > 0 ? (<div className={styled.botones}>
         {prevButton === true ? (
@@ -129,7 +129,7 @@ function Paginated() {
             )}
       </div>): (null)}
       </div>): (null)}
-    </>
+    </div>
   );
 }
 
