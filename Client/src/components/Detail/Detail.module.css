@@ -19,6 +19,7 @@
     padding-inline: 9px;
     padding-top: 1px;
     padding-bottom: 1px;
+    margin-bottom: 25px;
 }
 
 .button:hover{
@@ -97,6 +98,7 @@
     margin-left: 45px;
     font-size: 25px;
     font-weight: 0px;
+    
 }
 
 .titulo{
@@ -105,7 +107,11 @@
 }
 
 .dato{
-    margin: 15px;
+    margin: 0px;
+}
+
+.datos{
+    margin-bottom: 30px;
 }
 
 @media (max-width: 420px) {
@@ -117,34 +123,39 @@
     }
     
     .button{
-        font-size: 16px;
-        padding: 6px;
-        padding-block:2px;
+        margin-top: 20px;
+        display: flex;
+        font-size: 24px;
+        padding: 40px;
+        padding-block: 1px;
+        padding-bottom: 4px;
         align-self: center;
     }
     .formContainer{
         display: flex;
-        margin-top: 140px;
+        margin-top: 0px;
+        margin-bottom: 0px;
         height: 100%;
         width: 100%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         background-color: rgb(241, 251, 255);
         border-radius: 0px;
     }
     .imagen img{
-        width: 200px;
+        width: 250px;
         margin-inline: 0px;
-        margin-top: -30px;
-        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 0px;
 
     }
     .titulo{
         display: flex;
-        font-size: 24px;
+        font-size: 36px;
         margin: 0px;
         margin-top: 20px;
         margin-bottom: 15px;
+        text-wrap: balance;
     }
     .texto{
         align-items: center;
@@ -155,7 +166,11 @@
         margin-left: 0px;
     }
     .dato{
-        margin: 4px;
+        margin: 0px;
+    }
+    .datos{
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
     .loadingContainer{
         display: flex;
