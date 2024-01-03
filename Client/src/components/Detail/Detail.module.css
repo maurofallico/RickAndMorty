@@ -5,6 +5,31 @@
     align-items: center;
 }
 
+.button{
+    margin-top: 25px;
+    align-self: center;
+    width: fit-content;
+    color: black;
+    font-size: 28px;
+    border-radius: 8px;
+    border-color: hsla(0, 0%, 0%, 0.75);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    text-decoration-line: none;
+    padding-inline: 9px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(237, 237, 237);
+}
+
+.button:active{
+    background-color: rgb(178, 213, 250);
+}
+
 .formContainer{
     margin-top: 60px;
     margin-bottom: 30px;

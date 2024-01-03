@@ -3,6 +3,7 @@ const server = require('./src/app')
 const {conn, Characters} = require('./src/DB_connection')
 
 const getAllCharacters = async () => {
+  try {
     const response = await axios.get("http://localhost:5000/characters")
     const data = response.data
     const characters = data.map(char => {
@@ -21,6 +22,10 @@ const getAllCharacters = async () => {
     for (const character of characters) {
       await Characters.upsert(character)
     }
+  } catch (error) {
+    console.log(error)
+  }
+    
   }
 
 

@@ -1,11 +1,11 @@
 .botones{
-    margin-top: 20px;
+    margin-top: 5px;
     margin-inline: 350px;   
 }
 
 .button{
     margin-inline: 1em;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     width: 2.5em;
     height: 2.5em;
     border: 1px solid black;
