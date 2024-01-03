@@ -113,10 +113,16 @@
         align-items: center;
         width: 50vh;
     }
+    .button{
+        font-size: 16px;
+        padding: 6px;
+        padding-block:2px;
+    }
     .formContainer{
         width: 50vh;
         height: 25vh;
-        margin-top: 0px;
+        margin-top: 50px;
+        padding-block: 30px;
         
         border-radius: 0;
     }

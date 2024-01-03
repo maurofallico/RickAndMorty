@@ -8,6 +8,7 @@
     flex-direction: column;
     margin-top: 30px;
     align-items: center;
+    
    
 }
 
@@ -15,9 +16,9 @@
     background-color: rgb(241, 251, 255);
     font-size: 24px;
     color: rgb(0, 0, 0);
-    font-weight: bolder;
+    font-weight: 500;
     width: 800px;
-    min-width: 400px;
+    padding-inline: 20px;
     border-radius: 8px;
 }
 
@@ -41,10 +42,14 @@
 
 
 @media (max-width: 420px) {
+    
     .texto{
-        font-size: 12px;
+        text-wrap: pretty;
+        font-size: 16px;
         width: fit-content;
-        border-radius: 0;
+        padding-inline: 10px;
+        border-radius: 0px;
+        font-weight: 500
     }
     .profile{
         width: 130px;

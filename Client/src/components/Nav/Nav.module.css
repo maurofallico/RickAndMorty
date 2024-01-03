@@ -1,71 +1,98 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(31, 109, 151);
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(241, 251, 255);
+}
+
 .buttonContainer{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
     gap: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: screen;
+}
+
+.logoutContainer{
+    justify-self: center;
+    place-self: center;
+    align-self: end;
+    margin-right: 8px;
+}
+.searchContainer{
+    flex-direction: row;
+    margin-top: 10px;
+    display:flex;
+    justify-content: center;
 }
 
 .button{
     color: black;
-    font-size: 28px;
+    font-size: 24px;
     border-radius: 8px;
     border-color: hsla(0, 0%, 0%, 0.75);
     background-color: rgb(241, 251, 255);
     border: 2px solid black;
     text-decoration-line: none;
-    padding-inline: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-inline: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.selected{
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    border-radius: 8px;
+    background-color: rgb(178, 213, 250);
+    border: 2px solid rgb(0, 0, 0);
+    text-decoration-line: none;
+    padding-inline: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.logoutButton{
+    color: black;
+    font-size: 18px;
+    border-radius: 8px;
+    border-color: hsla(0, 0%, 0%, 0.75);
+    background-color: rgb(241, 251, 255);
+    border: 2px solid black;
+    text-decoration-line: none;
+    padding-inline: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .button:active{
     color: black;
 }
 
-.selected{
-    color: rgb(0, 0, 0);
-    font-weight: 400;
-    font-size: 28px;
-    border-radius: 8px;
-    background-color: rgb(178, 213, 250);
-    border: 2px solid rgb(0, 0, 0);
-    text-decoration-line: none;
-    padding-inline: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
 
 .button:hover{
     cursor: pointer;
     background-color: rgb(237, 237, 237);
 }
 
-.logoutContainer{
+/* .logoutContainer{
     position: absolute;
     top: 0px;
     right: 0px;
     margin-top: 25px;
     margin-right: 20px;
-}
+} */
 
-.searchContainer{
-    margin-top: 10px;
-    display:flex;
-    justify-content: center;
-    flex-direction: row;
-}
 
-.container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(31, 109, 151);
-    padding-bottom: 20px;
-    border-bottom: 3px solid rgb(241, 251, 255);
-}
+
 
 @media (max-width: 420px) {
+    .selected{
+        font-size:22px;
+        padding-inline: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
     .buttonContainer {
         display: flex;
         justify-content: center;
@@ -74,8 +101,10 @@
         gap: 20px;
     }
     .button{
-        font-size: 16px;
-        border-radius: 4px;
+        font-size: 22px;
+        padding-inline: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
     .logoutContainer{
         position: absolute;
@@ -84,6 +113,9 @@
         margin-top: 8px;
         margin-right: 45px;
         transform: scale(0.7)
+    }
+    .logoutContainer{
+        margin-right: 12px;
     }
 
   }
