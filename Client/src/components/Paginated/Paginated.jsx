@@ -1,5 +1,6 @@
 import Cards from "../Cards/Cards.jsx"
 import Nav from "..//Nav/Nav.jsx";
+import LoadingComponent from "../LoadingComponent/LoadingComponent.jsx";
 import { useState, useEffect } from "react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -90,7 +91,7 @@ function Paginated() {
           </button>
         )}
       </div>): (null)}
-      <Cards characters = {items} />
+      {allCharacters.length !== 0? (<div><Cards characters = {items} /></div>) : (<div><LoadingComponent /></div>)}
       {items.length > 0 ? (<div className={styled.botones}>
         {prevButton === true ? (
           <button className={styled.button} onClick={prevHandler}>

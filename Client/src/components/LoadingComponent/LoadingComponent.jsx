@@ -2,9 +2,9 @@ import styled from './LoadingComponent.module.css'
 
 function LoadingComponent () {
     return (
-        <>
-        <p className={styled.loadingText}>LOADING...</p>
-        </>
+        <div className={styled.container}>
+        <p className={styled.loadingText}>Loading Characters...</p>
+        </div>
     )
 }
 
