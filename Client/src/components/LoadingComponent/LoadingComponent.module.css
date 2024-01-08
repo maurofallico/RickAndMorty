@@ -1,6 +1,8 @@
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .loadingText{
@@ -16,6 +18,18 @@
     animation-name: bounce;
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
+}
+
+.simpleText{
+    display: flex;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(32, 110, 151, 1);
+    width: fit-content;
+    padding-block: 6px;
+    padding-bottom: 12px;
+    padding-inline: 40px;
+    border-radius: 64px;
 }
 
 @keyframes bounce {
