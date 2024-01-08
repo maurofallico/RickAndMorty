@@ -32,6 +32,18 @@
     border-radius: 64px;
 }
 
+.smallText{
+    display: flex;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(32, 110, 151, 1);
+    width: fit-content;
+    padding-block: 6px;
+    padding-bottom: 12px;
+    padding-inline: 40px;
+    border-radius: 64px;
+}
+
 @keyframes bounce {
     0% {transform: translateY(0px)}
     40% {transform: translateY(6px)}
@@ -47,5 +59,12 @@
         border-radius: 24px;
         margin-top: 32px;
     }
-
+    .simpleText{
+    font-size: 20px;
+    }
+    .smallText{
+    font-size: 16px;
+    border-radius: 0px;
+    padding-inline: 10px;   
+    }
   }
