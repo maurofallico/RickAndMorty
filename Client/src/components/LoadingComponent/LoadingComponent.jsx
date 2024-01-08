@@ -8,7 +8,7 @@ function LoadingComponent () {
     useEffect(() => {
         setTimeout(() => {
                 setSegundos(segundos+1)
-          }, 10);
+          }, 5);
 
         }, [segundos]); 
 
