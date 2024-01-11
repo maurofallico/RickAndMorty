@@ -12,7 +12,7 @@ const  CharactersModel  = require ('./models/Characters')
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
    // URL
-   "postgres://rickandmorty_ocyn_user:T3DHHf24cNf5FYQ2ovBBl5bjnY7LxMl3@dpg-cm6eri6d3nmc73cdfr80-a.oregon-postgres.render.com/rickandmorty_ocyn",
+   /* "postgres://rickandmorty_ocyn_user:T3DHHf24cNf5FYQ2ovBBl5bjnY7LxMl3@dpg-cm6eri6d3nmc73cdfr80-a.oregon-postgres.render.com/rickandmorty_ocyn", */
    { logging: false, native: false, dialectOptions: {
       ssl: { // Habilitar SSL/TLS
         require: true, // Requerir SSL
